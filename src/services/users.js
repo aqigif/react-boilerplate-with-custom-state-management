@@ -1,8 +1,6 @@
+import axios from "axios";
 
-import { client } from "./axios";
-
-export const getUsers = () => client({
+export const getUsers = () => axios({
   method: "GET",
-  baseURL: "https://reqres.in",
-  url: "/api/users?page=2",
+  url: "https://reqres.in/api/users?page=2",
 });
